@@ -27,8 +27,8 @@ async def my_test_case(dut):
 
     expected = 0
     dut._log.info("s_signal_1 is %s", dut.s_signal_1.value)
-    assert dut.s_signal_2.value[0] == expected, f"Error: s_signal_2[0] is not {expected}!"
+    assert dut.s_signal_2.value == expected, f"Error: s_signal_2[0] is not {expected}!"
 
     expected = 16
-    dut._log.info(f"G_DATA_WIDTH is  {dut.G_DATA_WIDTH.value} in binary and {dut.G_DATA_WIDTH.value.integer} as integer")
-    assert dut.G_DATA_WIDTH.value.integer == expected, f"Error: G_DATA_WIDTH is not {expected}!"
+    dut._log.info(f"G_DATA_WIDTH is  {dut.G_DATA_WIDTH.value} in binary and {dut.G_DATA_WIDTH.value.to_unsigned()} as integer")
+    assert dut.G_DATA_WIDTH.value.to_unsigned() == expected, f"Error: G_DATA_WIDTH is not {expected}!"
