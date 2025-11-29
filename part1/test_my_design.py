@@ -12,7 +12,7 @@ async def run_reset_routine(dut):
 async def my_test_case(dut):
 
     # Generate a clock
-    cocotb.start_soon(Clock(dut.clk, 1, units="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 1, unit="ns").start())
 
     # Reset DUT reset_n
     dut.reset_n.value = 0
@@ -23,7 +23,7 @@ async def my_test_case(dut):
     # Reset the module, wait 3 rising edges then release reset
     cocotb.start_soon(run_reset_routine(dut))
 
-    await Timer(10, units="ns")  # wait a bit
+    await Timer(10, unit="ns")  # wait a bit
 
     expected = 0
     dut._log.info("s_signal_1 is %s", dut.s_signal_1.value)

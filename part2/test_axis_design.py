@@ -21,7 +21,7 @@ async def axis_test_case(dut):
     dut._log.setLevel(logging.INFO)
 
     # Generate a clock
-    cocotb.start_soon(Clock(dut.clk, 5, units="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 5, unit="ns").start())
 
     # Generics
     data_width = int(dut.G_DATA_WIDTH.value)

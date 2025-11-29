@@ -2,7 +2,7 @@ import os
 import glob
 import pytest
 from pathlib import Path
-from cocotb.runner import get_runner
+from cocotb_tools.runner import get_runner
 
 # DUT generics
 G_DATA_WIDTH = [8, 10, 12, 16]

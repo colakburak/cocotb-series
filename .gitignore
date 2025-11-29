@@ -1,0 +1,12 @@
+sim_build/
+
+# python related
+__pycache__/
+
+# environment folders
+.venv/
+env/
+venv/
+
+# uv 
+uv.lock

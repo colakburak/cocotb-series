@@ -30,7 +30,7 @@ async def setup_sim(dut):
     dut._log.setLevel(logging.WARNING)
 
     # Generate a clock
-    cocotb.start_soon(Clock(dut.clk, 5, units="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 5, unit="ns").start())
 
     # Reset DUT reset_n
     dut.reset_n.value = 0

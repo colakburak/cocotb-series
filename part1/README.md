@@ -77,7 +77,7 @@ cocotb.start_soon(run_reset_routine(dut))
 Afterwards we instruct the test to wait on a **Trigger**, in this case a Timer for 10ns before continuing
 
 ```python
-await Timer(10, units="ns")  # wait a bit
+await Timer(10, unit="ns")  # wait a bit
 ```
 
 We could have also specified a different trigger, e.g. the next rising clock edge

@@ -1,0 +1,11 @@
+[project]
+name = "cocotb-series"
+version = "0.1.0"
+description = "Educational tutorial series to learn FPGA verification framework cocotb"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cocotb~=2.0",
+    "cocotb-bus>=0.3.0",
+    "pytest>=9.0.1",
+]
